@@ -38,8 +38,8 @@
         0 25px 80px rgba(0, 0, 0, 0.32);
 
     --glass-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.06),
-        0 20px 60px rgba(0,0,0,0.20);
+        inset 0 1px 0 rgba(255, 255, 255, 0.06),
+        0 20px 60px rgba(0, 0, 0, 0.20);
 
     --radius: 22px;
 }
@@ -64,8 +64,8 @@ body.light-mode {
         0 25px 70px rgba(51, 65, 85, 0.12);
 
     --glass-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.8),
-        0 20px 60px rgba(51,65,85,0.10);
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        0 20px 60px rgba(51, 65, 85, 0.10);
 }
 
 
@@ -84,16 +84,12 @@ body {
         sans-serif;
 
     background:
-        radial-gradient(
-            circle at 15% 10%,
+        radial-gradient(circle at 15% 10%,
             rgba(124, 92, 255, 0.10),
-            transparent 30%
-        ),
-        radial-gradient(
-            circle at 85% 35%,
+            transparent 30%),
+        radial-gradient(circle at 85% 35%,
             rgba(34, 211, 238, 0.07),
-            transparent 28%
-        ),
+            transparent 28%),
         var(--bg);
 
     color: var(--text);
@@ -301,14 +297,12 @@ a {
     color: white;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--primary),
-            #a855f7
-        );
+            #a855f7);
 
     box-shadow:
-        0 8px 30px rgba(124,92,255,0.35);
+        0 8px 30px rgba(124, 92, 255, 0.35);
 
     transition:
         transform 0.3s ease;
@@ -318,8 +312,7 @@ a {
 .brand:hover .brand-icon {
 
     transform:
-        rotate(-8deg)
-        scale(1.06);
+        rotate(-8deg) scale(1.06);
 }
 
 
@@ -371,7 +364,7 @@ a {
         1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.025);
+        rgba(255, 255, 255, 0.025);
 
     border-radius: 14px;
 }
@@ -403,7 +396,7 @@ a {
     color: var(--text);
 
     background:
-        rgba(255,255,255,0.07);
+        rgba(255, 255, 255, 0.07);
 }
 
 
@@ -426,7 +419,7 @@ a {
     border: 1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.045);
+        rgba(255, 255, 255, 0.045);
 
     color: var(--text-soft);
 
@@ -442,7 +435,7 @@ a {
     color: var(--text);
 
     border-color:
-        rgba(124,92,255,0.5);
+        rgba(124, 92, 255, 0.5);
 
     transform:
         translateY(-2px);
@@ -459,14 +452,12 @@ a {
     font-weight: 700;
 
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             var(--primary),
-            #8b5cf6
-        );
+            #8b5cf6);
 
     box-shadow:
-        0 8px 25px rgba(124,92,255,0.25);
+        0 8px 25px rgba(124, 92, 255, 0.25);
 
     border-radius: 11px;
 
@@ -486,7 +477,7 @@ a {
         translateY(-2px);
 
     box-shadow:
-        0 14px 32px rgba(124,92,255,0.35);
+        0 14px 32px rgba(124, 92, 255, 0.35);
 
     filter:
         brightness(1.08);
@@ -497,8 +488,7 @@ a {
 .primary-btn:active {
 
     transform:
-        translateY(0)
-        scale(0.98);
+        translateY(0) scale(0.98);
 }
 
 
@@ -556,15 +546,14 @@ a {
     padding: 7px 11px;
 
     border:
-        1px solid
-        rgba(124,92,255,0.22);
+        1px solid rgba(124, 92, 255, 0.22);
 
     border-radius: 50px;
 
     color: #a99bff;
 
     background:
-        rgba(124,92,255,0.06);
+        rgba(124, 92, 255, 0.06);
 
     font-size: 10px;
 
@@ -596,7 +585,8 @@ a {
 
 @keyframes pulseDot {
 
-    0%, 100% {
+    0%,
+    100% {
         opacity: 1;
         transform: scale(1);
     }
@@ -630,11 +620,9 @@ a {
 .hero-content h1 span {
 
     background:
-        linear-gradient(
-            100deg,
+        linear-gradient(100deg,
             #a78bfa,
-            #22d3ee
-        );
+            #22d3ee);
 
     -webkit-background-clip: text;
 
@@ -644,7 +632,7 @@ a {
 }
 
 
-.hero-content > p {
+.hero-content>p {
 
     color: var(--text-muted);
 
@@ -672,7 +660,7 @@ a {
         1px solid var(--border-light);
 
     background:
-        rgba(255,255,255,0.045);
+        rgba(255, 255, 255, 0.045);
 
     color: var(--text-soft);
 
@@ -690,7 +678,7 @@ a {
 .glass-btn:hover {
 
     background:
-        rgba(255,255,255,0.09);
+        rgba(255, 255, 255, 0.09);
 
     color: var(--text);
 
@@ -730,11 +718,9 @@ a {
         1px solid var(--border);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.075),
-            rgba(255,255,255,0.025)
-        );
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.075),
+            rgba(255, 255, 255, 0.025));
 
     backdrop-filter:
         blur(20px);
@@ -850,7 +836,7 @@ a {
     border-radius: 12px;
 
     background:
-        rgba(255,255,255,0.07);
+        rgba(255, 255, 255, 0.07);
 
     border:
         1px solid var(--border);
@@ -938,11 +924,9 @@ a {
         1px solid var(--border);
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(255,255,255,0.065),
-            rgba(255,255,255,0.022)
-        );
+        linear-gradient(145deg,
+            rgba(255, 255, 255, 0.065),
+            rgba(255, 255, 255, 0.022));
 
     backdrop-filter:
         blur(22px);
@@ -1020,35 +1004,34 @@ a {
     color: var(--primary-light);
 
     background:
-        rgba(124,92,255,0.10);
+        rgba(124, 92, 255, 0.10);
 
     border:
-        1px solid
-        rgba(124,92,255,0.15);
+        1px solid rgba(124, 92, 255, 0.15);
 }
 
 
 .section-icon.purple {
     color: #c084fc;
-    background: rgba(192,132,252,0.09);
+    background: rgba(192, 132, 252, 0.09);
 }
 
 
 .section-icon.cyan {
     color: var(--cyan);
-    background: rgba(34,211,238,0.08);
+    background: rgba(34, 211, 238, 0.08);
 }
 
 
 .section-icon.green {
     color: var(--green);
-    background: rgba(52,211,153,0.08);
+    background: rgba(52, 211, 153, 0.08);
 }
 
 
 .section-icon.orange {
     color: var(--orange);
-    background: rgba(251,146,60,0.08);
+    background: rgba(251, 146, 60, 0.08);
 }
 
 
@@ -1084,7 +1067,7 @@ a {
         1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.035);
+        rgba(255, 255, 255, 0.035);
 
     color: var(--text-muted);
 
@@ -1106,10 +1089,10 @@ a {
     color: var(--red);
 
     border-color:
-        rgba(251,113,133,0.25);
+        rgba(251, 113, 133, 0.25);
 
     background:
-        rgba(251,113,133,0.06);
+        rgba(251, 113, 133, 0.06);
 }
 
 
@@ -1140,7 +1123,7 @@ a {
         1px solid var(--border);
 
     background:
-        rgba(0,0,0,0.08);
+        rgba(0, 0, 0, 0.08);
 }
 
 
@@ -1182,7 +1165,7 @@ a {
     outline: none;
 
     background:
-        rgba(255,255,255,0.035);
+        rgba(255, 255, 255, 0.035);
 
     color: var(--text-soft);
 
@@ -1212,10 +1195,10 @@ a {
 .filter-panel select:focus {
 
     border-color:
-        rgba(124,92,255,0.55);
+        rgba(124, 92, 255, 0.55);
 
     background:
-        rgba(124,92,255,0.05);
+        rgba(124, 92, 255, 0.05);
 }
 
 
@@ -1264,7 +1247,7 @@ th {
     font-weight: 700;
 
     background:
-        rgba(255,255,255,0.018);
+        rgba(255, 255, 255, 0.018);
 }
 
 
@@ -1293,7 +1276,7 @@ tbody tr {
 tbody tr:hover {
 
     background:
-        rgba(124,92,255,0.035);
+        rgba(124, 92, 255, 0.035);
 }
 
 
@@ -1327,7 +1310,7 @@ tbody tr:hover {
         1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.035);
+        rgba(255, 255, 255, 0.035);
 
     font-size: 10px;
 
@@ -1362,11 +1345,10 @@ tbody tr:hover {
     color: var(--green);
 
     background:
-        rgba(52,211,153,0.08);
+        rgba(52, 211, 153, 0.08);
 
     border:
-        1px solid
-        rgba(52,211,153,0.15);
+        1px solid rgba(52, 211, 153, 0.15);
 }
 
 
@@ -1375,11 +1357,10 @@ tbody tr:hover {
     color: var(--red);
 
     background:
-        rgba(251,113,133,0.08);
+        rgba(251, 113, 133, 0.08);
 
     border:
-        1px solid
-        rgba(251,113,133,0.15);
+        1px solid rgba(251, 113, 133, 0.15);
 }
 
 
@@ -1420,7 +1401,7 @@ tbody tr:hover {
         1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.035);
+        rgba(255, 255, 255, 0.035);
 
     transition:
         all 0.25s ease;
@@ -1442,10 +1423,10 @@ tbody tr:hover {
 .edit-btn:hover {
 
     background:
-        rgba(124,92,255,0.12);
+        rgba(124, 92, 255, 0.12);
 
     border-color:
-        rgba(124,92,255,0.3);
+        rgba(124, 92, 255, 0.3);
 
     transform:
         translateY(-2px);
@@ -1455,10 +1436,10 @@ tbody tr:hover {
 .delete-btn:hover {
 
     background:
-        rgba(251,113,133,0.10);
+        rgba(251, 113, 133, 0.10);
 
     border-color:
-        rgba(251,113,133,0.3);
+        rgba(251, 113, 133, 0.3);
 
     transform:
         translateY(-2px);
@@ -1521,13 +1502,12 @@ tbody tr:hover {
     justify-content: center;
 
     background:
-        rgba(124,92,255,0.10);
+        rgba(124, 92, 255, 0.10);
 
     color: var(--primary-light);
 
     border:
-        1px solid
-        rgba(124,92,255,0.20);
+        1px solid rgba(124, 92, 255, 0.20);
 
     z-index: 2;
 
@@ -1543,8 +1523,7 @@ tbody tr:hover {
     border-radius: 50%;
 
     border:
-        1px solid
-        rgba(124,92,255,0.14);
+        1px solid rgba(124, 92, 255, 0.14);
 
     animation:
         expandRing 3s ease-out infinite;
@@ -1583,7 +1562,8 @@ tbody tr:hover {
 
 @keyframes float {
 
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -1668,7 +1648,7 @@ tbody tr:hover {
 }
 
 
-.analytics-heading > p {
+.analytics-heading>p {
 
     max-width: 390px;
 
@@ -1714,15 +1694,12 @@ tbody tr:hover {
     border-radius: 14px;
 
     background:
-        linear-gradient(
-            135deg,
-            rgba(124,92,255,0.12),
-            rgba(34,211,238,0.04)
-        );
+        linear-gradient(135deg,
+            rgba(124, 92, 255, 0.12),
+            rgba(34, 211, 238, 0.04));
 
     border:
-        1px solid
-        rgba(124,92,255,0.12);
+        1px solid rgba(124, 92, 255, 0.12);
 
     margin-bottom: 18px;
 }
@@ -1768,7 +1745,7 @@ tbody tr:hover {
     border-radius: 12px;
 
     background:
-        rgba(255,255,255,0.025);
+        rgba(255, 255, 255, 0.025);
 }
 
 
@@ -1846,7 +1823,7 @@ tbody tr:hover {
     border-radius: 20px;
 
     background:
-        rgba(255,255,255,0.06);
+        rgba(255, 255, 255, 0.06);
 }
 
 
@@ -1857,15 +1834,12 @@ tbody tr:hover {
     border-radius: 20px;
 
     background:
-        linear-gradient(
-            90deg,
+        linear-gradient(90deg,
             var(--primary),
-            var(--cyan)
-        );
+            var(--cyan));
 
     box-shadow:
-        0 0 14px
-        rgba(124,92,255,0.30);
+        0 0 14px rgba(124, 92, 255, 0.30);
 
     transform-origin: left;
 
@@ -1928,19 +1902,15 @@ tbody tr:hover {
     justify-content: center;
 
     border:
-        1px solid
-        rgba(52,211,153,0.25);
+        1px solid rgba(52, 211, 153, 0.25);
 
     background:
-        radial-gradient(
-            circle,
-            rgba(52,211,153,0.12),
-            rgba(52,211,153,0.025)
-        );
+        radial-gradient(circle,
+            rgba(52, 211, 153, 0.12),
+            rgba(52, 211, 153, 0.025));
 
     box-shadow:
-        0 0 35px
-        rgba(52,211,153,0.08);
+        0 0 35px rgba(52, 211, 153, 0.08);
 }
 
 
@@ -2005,7 +1975,7 @@ tbody tr:hover {
     border-radius: 11px;
 
     background:
-        rgba(255,255,255,0.025);
+        rgba(255, 255, 255, 0.025);
 }
 
 
@@ -2061,7 +2031,7 @@ tbody tr:hover {
     border-radius: 12px;
 
     background:
-        rgba(255,255,255,0.025);
+        rgba(255, 255, 255, 0.025);
 
     transition:
         transform 0.25s ease,
@@ -2075,7 +2045,7 @@ tbody tr:hover {
         translateX(4px);
 
     background:
-        rgba(255,255,255,0.045);
+        rgba(255, 255, 255, 0.045);
 }
 
 
@@ -2094,7 +2064,7 @@ tbody tr:hover {
     justify-content: center;
 
     background:
-        rgba(52,211,153,0.08);
+        rgba(52, 211, 153, 0.08);
 
     color: var(--green);
 
@@ -2107,7 +2077,7 @@ tbody tr:hover {
     color: var(--red);
 
     background:
-        rgba(251,113,133,0.08);
+        rgba(251, 113, 133, 0.08);
 }
 
 
@@ -2116,7 +2086,7 @@ tbody tr:hover {
     color: var(--primary-light);
 
     background:
-        rgba(124,92,255,0.08);
+        rgba(124, 92, 255, 0.08);
 }
 
 
@@ -2157,7 +2127,7 @@ tbody tr:hover {
     padding: 20px;
 
     background:
-        rgba(2,6,23,0.72);
+        rgba(2, 6, 23, 0.72);
 
     backdrop-filter:
         blur(10px);
@@ -2201,11 +2171,9 @@ tbody tr:hover {
     overflow-y: auto;
 
     background:
-        linear-gradient(
-            145deg,
-            rgba(24,28,48,0.98),
-            rgba(10,13,25,0.98)
-        );
+        linear-gradient(145deg,
+            rgba(24, 28, 48, 0.98),
+            rgba(10, 13, 25, 0.98));
 
     border:
         1px solid var(--border-light);
@@ -2213,17 +2181,17 @@ tbody tr:hover {
     border-radius: 23px;
 
     box-shadow:
-        0 40px 100px rgba(0,0,0,0.5);
+        0 40px 100px rgba(0, 0, 0, 0.5);
 
     animation:
-        modalSlide 0.35s cubic-bezier(.2,.8,.2,1) both;
+        modalSlide 0.35s cubic-bezier(.2, .8, .2, 1) both;
 }
 
 
 .light-mode .modal {
 
     background:
-        rgba(248,250,252,0.98);
+        rgba(248, 250, 252, 0.98);
 }
 
 
@@ -2232,15 +2200,13 @@ tbody tr:hover {
     from {
         opacity: 0;
         transform:
-            translateY(25px)
-            scale(0.97);
+            translateY(25px) scale(0.97);
     }
 
     to {
         opacity: 1;
         transform:
-            translateY(0)
-            scale(1);
+            translateY(0) scale(1);
     }
 }
 
@@ -2263,7 +2229,7 @@ tbody tr:hover {
     border-radius: 50%;
 
     background:
-        rgba(124,92,255,0.18);
+        rgba(124, 92, 255, 0.18);
 
     filter: blur(45px);
 
@@ -2318,7 +2284,7 @@ tbody tr:hover {
         1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.04);
+        rgba(255, 255, 255, 0.04);
 
     color: var(--text-muted);
 
@@ -2374,7 +2340,7 @@ tbody tr:hover {
         1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.035);
+        rgba(255, 255, 255, 0.035);
 
     color: var(--text);
 
@@ -2398,14 +2364,13 @@ tbody tr:hover {
 .form-group textarea:focus {
 
     border-color:
-        rgba(124,92,255,0.6);
+        rgba(124, 92, 255, 0.6);
 
     background:
-        rgba(124,92,255,0.04);
+        rgba(124, 92, 255, 0.04);
 
     box-shadow:
-        0 0 0 3px
-        rgba(124,92,255,0.08);
+        0 0 0 3px rgba(124, 92, 255, 0.08);
 }
 
 
@@ -2441,7 +2406,7 @@ tbody tr:hover {
 }
 
 
-.input-wrapper > span {
+.input-wrapper>span {
 
     position: absolute;
 
@@ -2518,44 +2483,40 @@ tbody tr:hover {
     font-weight: 600;
 
     background:
-        rgba(255,255,255,0.025);
+        rgba(255, 255, 255, 0.025);
 
     transition:
         all 0.25s ease;
 }
 
 
-.type-option:first-child
-input:checked + span {
+.type-option:first-child input:checked+span {
 
     color: var(--green);
 
     border-color:
-        rgba(52,211,153,0.35);
+        rgba(52, 211, 153, 0.35);
 
     background:
-        rgba(52,211,153,0.08);
+        rgba(52, 211, 153, 0.08);
 
     box-shadow:
-        0 0 20px
-        rgba(52,211,153,0.06);
+        0 0 20px rgba(52, 211, 153, 0.06);
 }
 
 
-.type-option:last-child
-input:checked + span {
+.type-option:last-child input:checked+span {
 
     color: var(--red);
 
     border-color:
-        rgba(251,113,133,0.35);
+        rgba(251, 113, 133, 0.35);
 
     background:
-        rgba(251,113,133,0.08);
+        rgba(251, 113, 133, 0.08);
 
     box-shadow:
-        0 0 20px
-        rgba(251,113,133,0.06);
+        0 0 20px rgba(251, 113, 133, 0.06);
 }
 
 
@@ -2605,7 +2566,7 @@ input:checked + span {
         1px solid var(--border);
 
     background:
-        rgba(255,255,255,0.04);
+        rgba(255, 255, 255, 0.04);
 
     color: var(--text-soft);
 
@@ -2649,13 +2610,13 @@ input:checked + span {
     border-radius: 14px;
 
     background:
-        rgba(18,23,40,0.92);
+        rgba(18, 23, 40, 0.92);
 
     backdrop-filter:
         blur(20px);
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,0.3);
+        0 20px 60px rgba(0, 0, 0, 0.3);
 
     transform:
         translateY(130px);
@@ -2665,14 +2626,14 @@ input:checked + span {
     pointer-events: none;
 
     transition:
-        all 0.4s cubic-bezier(.2,.8,.2,1);
+        all 0.4s cubic-bezier(.2, .8, .2, 1);
 }
 
 
 .light-mode .toast {
 
     background:
-        rgba(255,255,255,0.95);
+        rgba(255, 255, 255, 0.95);
 }
 
 
@@ -2704,7 +2665,7 @@ input:checked + span {
     color: var(--green);
 
     background:
-        rgba(52,211,153,0.10);
+        rgba(52, 211, 153, 0.10);
 }
 
 
@@ -2726,7 +2687,7 @@ input:checked + span {
 }
 
 
-.toast > button {
+.toast>button {
 
     margin-left: auto;
 
@@ -2748,7 +2709,7 @@ input:checked + span {
         1px solid var(--border);
 
     background:
-        rgba(0,0,0,0.12);
+        rgba(0, 0, 0, 0.12);
 
     margin-top: 30px;
 }
@@ -2776,7 +2737,7 @@ input:checked + span {
 }
 
 
-.footer-brand > p {
+.footer-brand>p {
 
     max-width: 350px;
 
@@ -3243,7 +3204,9 @@ input:checked + span {
 
     .icon-btn {
 
-        display: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
     }
 
@@ -3273,6 +3236,30 @@ input:checked + span {
 
         grid-template-columns: 1fr;
 
+    }
+
+}
+
+/* =========================================================
+   MOBILE THEME TOGGLE
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .nav-actions .theme-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .nav-actions .theme-toggle {
+        display: flex;
+        width: 40px;
+        height: 40px;
     }
 
 }
