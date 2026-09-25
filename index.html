@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="A modern glassmorphism expense tracker for managing income, expenses and personal finances."
+    >
+
+    <title>Finora — Expense Tracker</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+    <div class="background-orb orb-one"></div>
+    <div class="background-orb orb-two"></div>
+    <div class="background-orb orb-three"></div>
+
+    <div class="noise-overlay"></div>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="#" class="brand">
+
+                <div class="brand-icon">
+                    <i class="fa-solid fa-wallet"></i>
+                </div>
+
+                <div class="brand-text">
+                    <span>FINORA</span>
+                    <small>SMART FINANCE</small>
+                </div>
+
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="#dashboard" class="nav-link active">
+                    Dashboard
+                </a>
+
+                <a href="#transactions" class="nav-link">
+                    Transactions
+                </a>
+
+                <a href="#analytics" class="nav-link">
+                    Analytics
+                </a>
+
+            </div>
+
+
+            <div class="nav-actions">
+
+                <button
+                    class="icon-btn"
+                    id="themeToggle"
+                    aria-label="Toggle theme"
+                    title="Toggle theme"
+                >
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+
+                <button
+                    class="nav-add-btn"
+                    id="openModalBtn"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Add Transaction</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="app-container" id="dashboard">
+
+        <!-- Hero -->
+
+        <section class="hero-section">
+
+            <div class="hero-content">
+
+                <div class="status-pill">
+
+                    <span class="status-dot"></span>
+
+                    <span>YOUR FINANCIAL OVERVIEW</span>
+
+                </div>
+
+                <h1>
+                    Take control of
+                    <span>your money.</span>
+                </h1>
+
+                <p>
+                    Track your income, manage expenses and understand
+                    your spending habits — all from one beautiful dashboard.
+                </p>
+
+            </div>
+
+
+            <div class="hero-actions">
+
+                <button
+                    class="glass-btn"
+                    id="exportBtn"
+                >
+                    <i class="fa-solid fa-file-export"></i>
+                    Export CSV
+                </button>
+
+                <button
+                    class="primary-btn"
+                    id="heroAddBtn"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    New Transaction
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= SUMMARY ================= -->
+
+        <section class="summary-grid">
+
+            <article class="summary-card income-card">
+
+                <div class="card-top">
+
+                    <div class="summary-icon">
+                        <i class="fa-solid fa-arrow-trend-up"></i>
+                    </div>
+
+                    <span class="trend-label positive">
+                        <i class="fa-solid fa-arrow-up"></i>
+                        Income
+                    </span>
+
+                </div>
+
+                <div class="summary-content">
+
+                    <p>Total Income</p>
+
+                    <h2 id="totalIncome">
+                        ₹0.00
+                    </h2>
+
+                </div>
+
+                <div class="card-glow"></div>
+
+            </article>
+
+
+            <article class="summary-card expense-card">
+
+                <div class="card-top">
+
+                    <div class="summary-icon">
+                        <i class="fa-solid fa-arrow-trend-down"></i>
+                    </div>
+
+                    <span class="trend-label negative">
+                        <i class="fa-solid fa-arrow-down"></i>
+                        Expenses
+                    </span>
+
+                </div>
+
+                <div class="summary-content">
+
+                    <p>Total Expenses</p>
+
+                    <h2 id="totalExpenses">
+                        ₹0.00
+                    </h2>
+
+                </div>
+
+                <div class="card-glow"></div>
+
+            </article>
+
+
+            <article class="summary-card balance-card">
+
+                <div class="card-top">
+
+                    <div class="summary-icon">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+
+                    <span
+                        class="trend-label"
+                        id="balanceStatus"
+                    >
+                        Balance
+                    </span>
+
+                </div>
+
+                <div class="summary-content">
+
+                    <p>Current Balance</p>
+
+                    <h2 id="balance">
+                        ₹0.00
+                    </h2>
+
+                </div>
+
+                <div class="card-glow"></div>
+
+            </article>
+
+
+            <article class="summary-card transactions-card">
+
+                <div class="card-top">
+
+                    <div class="summary-icon">
+                        <i class="fa-solid fa-receipt"></i>
+                    </div>
+
+                    <span class="trend-label neutral">
+                        Activity
+                    </span>
+
+                </div>
+
+                <div class="summary-content">
+
+                    <p>Total Transactions</p>
+
+                    <h2 id="transactionCount">
+                        0
+                    </h2>
+
+                </div>
+
+                <div class="card-glow"></div>
+
+            </article>
+
+        </section>
+
+
+        <!-- ================= TRANSACTIONS ================= -->
+
+        <section
+            class="glass-panel transactions-panel"
+            id="transactions"
+        >
+
+            <div class="panel-header">
+
+                <div class="section-title">
+
+                    <div class="section-icon">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <div>
+                        <h2>Transactions</h2>
+
+                        <p>
+                            Keep track of every financial movement.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="panel-actions">
+
+                    <button
+                        class="secondary-action"
+                        id="clearAllBtn"
+                    >
+                        <i class="fa-solid fa-trash-can"></i>
+                        Clear All
+                    </button>
+
+                    <button
+                        class="primary-btn small-btn"
+                        id="panelAddBtn"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Add
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Filters -->
+
+            <div class="filter-panel">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search transactions..."
+                    >
+
+                </div>
+
+
+                <select id="typeFilter">
+
+                    <option value="all">
+                        All Types
+                    </option>
+
+                    <option value="income">
+                        Income
+                    </option>
+
+                    <option value="expense">
+                        Expense
+                    </option>
+
+                </select>
+
+
+                <select id="categoryFilter">
+
+                    <option value="all">
+                        All Categories
+                    </option>
+
+                </select>
+
+
+                <select id="monthFilter">
+
+                    <option value="all">
+                        All Months
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Table -->
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Date</th>
+
+                            <th>Description</th>
+
+                            <th>Category</th>
+
+                            <th>Type</th>
+
+                            <th>Amount</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="transactionList"></tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- Empty State -->
+
+            <div
+                id="emptyState"
+                class="empty-state"
+            >
+
+                <div class="empty-animation">
+
+                    <div class="empty-circle">
+                        <i class="fa-solid fa-wallet"></i>
+                    </div>
+
+                    <div class="empty-ring ring-one"></div>
+                    <div class="empty-ring ring-two"></div>
+
+                </div>
+
+                <h3>No transactions found</h3>
+
+                <p>
+                    Start tracking your finances by adding
+                    your first transaction.
+                </p>
+
+                <button
+                    class="primary-btn"
+                    id="emptyAddBtn"
+                >
+                    <i class="fa-solid fa-plus"></i>
+                    Add Your First Transaction
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= ANALYTICS ================= -->
+
+        <section
+            class="analytics-section"
+            id="analytics"
+        >
+
+            <div class="analytics-heading">
+
+                <div>
+                    <span class="section-label">
+                        INSIGHTS
+                    </span>
+
+                    <h2>
+                        Understand your spending.
+                    </h2>
+                </div>
+
+                <p>
+                    Simple insights that help you see where
+                    your money is going.
+                </p>
+
+            </div>
+
+
+            <div class="analytics-grid">
+
+                <!-- Monthly -->
+
+                <article class="glass-panel monthly-card">
+
+                    <div class="panel-header compact">
+
+                        <div class="section-title">
+
+                            <div class="section-icon purple">
+                                <i class="fa-solid fa-calendar-days"></i>
+                            </div>
+
+                            <div>
+                                <h2>Monthly Summary</h2>
+
+                                <p>
+                                    Current month overview
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="monthly-content">
+
+                        <div class="monthly-main">
+
+                            <span>
+                                This Month's Expenses
+                            </span>
+
+                            <h3 id="monthlyExpense">
+                                ₹0.00
+                            </h3>
+
+                        </div>
+
+
+                        <div class="monthly-details">
+
+                            <div>
+                                <span>Income</span>
+                                <strong id="monthlyIncome">
+                                    ₹0.00
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>Expenses</span>
+                                <strong id="monthlyExpenseSmall">
+                                    ₹0.00
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Category Chart -->
+
+                <article class="glass-panel category-card">
+
+                    <div class="panel-header compact">
+
+                        <div class="section-title">
+
+                            <div class="section-icon cyan">
+                                <i class="fa-solid fa-chart-simple"></i>
+                            </div>
+
+                            <div>
+                                <h2>Expense Categories</h2>
+
+                                <p>
+                                    Where your money is going
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="categoryChart"
+                        class="category-chart"
+                    ></div>
+
+                </article>
+
+
+                <!-- Financial Health -->
+
+                <article class="glass-panel health-card">
+
+                    <div class="panel-header compact">
+
+                        <div class="section-title">
+
+                            <div class="section-icon green">
+                                <i class="fa-solid fa-heart-pulse"></i>
+                            </div>
+
+                            <div>
+                                <h2>Financial Snapshot</h2>
+
+                                <p>
+                                    Based on your current data
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="health-content">
+
+                        <div class="health-score">
+
+                            <div
+                                class="score-circle"
+                                id="scoreCircle"
+                            >
+                                <span id="healthScore">
+                                    0
+                                </span>
+
+                                <small>/ 100</small>
+                            </div>
+
+                            <div>
+                                <h3 id="healthTitle">
+                                    Start tracking
+                                </h3>
+
+                                <p id="healthDescription">
+                                    Add transactions to generate
+                                    your financial snapshot.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="health-stats">
+
+                            <div>
+                                <span>Income</span>
+                                <strong id="healthIncome">
+                                    ₹0
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>Expenses</span>
+                                <strong id="healthExpenses">
+                                    ₹0
+                                </strong>
+                            </div>
+
+                            <div>
+                                <span>Savings Rate</span>
+                                <strong id="savingsRate">
+                                    0%
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Quick Stats -->
+
+                <article class="glass-panel quick-card">
+
+                    <div class="panel-header compact">
+
+                        <div class="section-title">
+
+                            <div class="section-icon orange">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+
+                            <div>
+                                <h2>Quick Stats</h2>
+
+                                <p>
+                                    Your activity at a glance
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-stats">
+
+                        <div class="quick-stat">
+
+                            <span class="quick-stat-icon">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </span>
+
+                            <div>
+                                <small>
+                                    Largest Income
+                                </small>
+
+                                <strong id="largestIncome">
+                                    ₹0
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-stat">
+
+                            <span class="quick-stat-icon expense">
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </span>
+
+                            <div>
+                                <small>
+                                    Largest Expense
+                                </small>
+
+                                <strong id="largestExpense">
+                                    ₹0
+                                </strong>
+                            </div>
+
+                        </div>
+
+
+                        <div class="quick-stat">
+
+                            <span class="quick-stat-icon purple">
+                                <i class="fa-solid fa-tag"></i>
+                            </span>
+
+                            <div>
+                                <small>
+                                    Top Category
+                                </small>
+
+                                <strong id="topCategory">
+                                    —
+                                </strong>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+
+                    <a href="#" class="brand">
+
+                        <div class="brand-icon">
+                            <i class="fa-solid fa-wallet"></i>
+                        </div>
+
+                        <div class="brand-text">
+                            <span>FINORA</span>
+                            <small>SMART FINANCE</small>
+                        </div>
+
+                    </a>
+
+                    <p>
+                        A modern, privacy-friendly personal finance
+                        tracker designed to make everyday money
+                        management simpler.
+                    </p>
+
+                    <div class="footer-socials">
+
+                        <a
+                            href="https://github.com/"
+                            target="_blank"
+                            aria-label="GitHub"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+
+                        <a
+                            href="https://linkedin.com/"
+                            target="_blank"
+                            aria-label="LinkedIn"
+                        >
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+
+                        <a
+                            href="#"
+                            aria-label="Website"
+                        >
+                            <i class="fa-solid fa-globe"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Product</h3>
+
+                    <a href="#dashboard">
+                        Dashboard
+                    </a>
+
+                    <a href="#transactions">
+                        Transactions
+                    </a>
+
+                    <a href="#analytics">
+                        Analytics
+                    </a>
+
+                    <a href="#transactions">
+                        Expense Tracking
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Features</h3>
+
+                    <a href="#transactions">
+                        Income Tracking
+                    </a>
+
+                    <a href="#transactions">
+                        Expense Tracking
+                    </a>
+
+                    <a href="#analytics">
+                        Monthly Summary
+                    </a>
+
+                    <a href="#analytics">
+                        Spending Insights
+                    </a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Technology</h3>
+
+                    <span>
+                        <i class="fa-brands fa-html5"></i>
+                        HTML5
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-css3-alt"></i>
+                        CSS3
+                    </span>
+
+                    <span>
+                        <i class="fa-brands fa-js"></i>
+                        JavaScript
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-divider"></div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Finora. All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= MODAL ================= -->
+
+    <div
+        id="transactionModal"
+        class="modal-overlay"
+    >
+
+        <div class="modal">
+
+            <div class="modal-top-glow"></div>
+
+            <div class="modal-header">
+
+                <div>
+
+                    <span class="section-label">
+                        FINANCIAL ENTRY
+                    </span>
+
+                    <h2 id="modalTitle">
+                        Add Transaction
+                    </h2>
+
+                    <p>
+                        Enter the details of your transaction.
+                    </p>
+
+                </div>
+
+                <button
+                    class="close-btn"
+                    id="closeModalBtn"
+                >
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+            </div>
+
+
+            <form id="transactionForm">
+
+                <div class="form-group">
+
+                    <label>
+                        Transaction Type
+                    </label>
+
+                    <div class="type-selector">
+
+                        <label class="type-option">
+
+                            <input
+                                type="radio"
+                                name="type"
+                                value="income"
+                                checked
+                            >
+
+                            <span>
+
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+
+                                Income
+
+                            </span>
+
+                        </label>
+
+
+                        <label class="type-option">
+
+                            <input
+                                type="radio"
+                                name="type"
+                                value="expense"
+                            >
+
+                            <span>
+
+                                <i class="fa-solid fa-arrow-trend-down"></i>
+
+                                Expense
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label for="amount">
+                            Amount
+                        </label>
+
+                        <div class="input-wrapper">
+
+                            <span>₹</span>
+
+                            <input
+                                type="number"
+                                id="amount"
+                                placeholder="0.00"
+                                min="0.01"
+                                step="0.01"
+                                required
+                            >
+
+                        </div>
+
+                        <small
+                            class="error-message"
+                            id="amountError"
+                        ></small>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="date">
+                            Date
+                        </label>
+
+                        <input
+                            type="date"
+                            id="date"
+                            required
+                        >
+
+                        <small
+                            class="error-message"
+                            id="dateError"
+                        ></small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select
+                        id="category"
+                        required
+                    ></select>
+
+                    <small
+                        class="error-message"
+                        id="categoryError"
+                    ></small>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="description">
+                        Description
+                    </label>
+
+                    <textarea
+                        id="description"
+                        placeholder="What was this transaction for?"
+                        maxlength="100"
+                        required
+                    ></textarea>
+
+                    <div class="character-counter">
+                        <span id="characterCount">0</span>/100
+                    </div>
+
+                    <small
+                        class="error-message"
+                        id="descriptionError"
+                    ></small>
+
+                </div>
+
+
+                <div class="form-actions">
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        id="cancelBtn"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        <i class="fa-solid fa-check"></i>
+                        Save Transaction
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- Toast -->
+
+    <div
+        class="toast"
+        id="toast"
+    >
+
+        <div class="toast-icon">
+            <i class="fa-solid fa-check"></i>
+        </div>
+
+        <div>
+            <strong id="toastTitle">
+                Success
+            </strong>
+
+            <p id="toastMessage">
+                Transaction saved.
+            </p>
+        </div>
+
+        <button id="closeToast">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
