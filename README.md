@@ -36,15 +36,6 @@ Data Storage
 
 Transaction data will be stored in browsers Local Storage. Hence, the transactions are persistent even after page refresh.
 
-Project Structure
-
-expense-tracker/
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-
 
 Author
 Arathy Shiju
