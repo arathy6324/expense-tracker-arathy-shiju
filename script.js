@@ -1,12 +1,3 @@
-/* =========================================================
-   FINORA EXPENSE TRACKER
-   Application Logic
-========================================================= */
-
-
-/* =========================================================
-   DOM ELEMENTS
-========================================================= */
 
 const transactionForm =
     document.getElementById("transactionForm");
@@ -141,9 +132,6 @@ const closeToast =
     document.getElementById("closeToast");
 
 
-/* =========================================================
-   DATA
-========================================================= */
 
 let transactions =
     JSON.parse(
@@ -157,10 +145,6 @@ let editingId = null;
 
 let toastTimer = null;
 
-
-/* =========================================================
-   CATEGORIES
-========================================================= */
 
 const incomeCategories = [
     "Salary",
@@ -188,10 +172,6 @@ const expenseCategories = [
 ];
 
 
-/* =========================================================
-   LOCAL STORAGE
-========================================================= */
-
 function saveTransactions() {
 
     localStorage.setItem(
@@ -201,10 +181,6 @@ function saveTransactions() {
 
 }
 
-
-/* =========================================================
-   FORMATTING
-========================================================= */
 
 function formatCurrency(amount) {
 
@@ -295,10 +271,6 @@ function escapeHTML(value) {
 }
 
 
-/* =========================================================
-   MODAL
-========================================================= */
-
 function openModal() {
 
     transactionModal.classList.add(
@@ -352,10 +324,6 @@ function closeModal() {
 
 }
 
-
-/* =========================================================
-   MODAL EVENTS
-========================================================= */
 
 openModalBtn.addEventListener(
     "click",
@@ -429,9 +397,6 @@ document.addEventListener(
 );
 
 
-/* =========================================================
-   DATE
-========================================================= */
 
 function setDefaultDate() {
 
@@ -459,10 +424,6 @@ function setDefaultDate() {
 
 }
 
-
-/* =========================================================
-   CATEGORY OPTIONS
-========================================================= */
 
 function updateCategoryOptions(
     selectedCategory = ""
@@ -549,10 +510,6 @@ document
     );
 
 
-/* =========================================================
-   CHARACTER COUNTER
-========================================================= */
-
 descriptionInput.addEventListener(
     "input",
     () => {
@@ -563,10 +520,6 @@ descriptionInput.addEventListener(
     }
 );
 
-
-/* =========================================================
-   VALIDATION
-========================================================= */
 
 function clearErrors() {
 
@@ -657,10 +610,6 @@ function validateForm(
 
 }
 
-
-/* =========================================================
-   ADD / EDIT TRANSACTION
-========================================================= */
 
 transactionForm.addEventListener(
     "submit",
@@ -795,10 +744,6 @@ transactionForm.addEventListener(
 );
 
 
-/* =========================================================
-   FILTERING
-========================================================= */
-
 function getFilteredTransactions() {
 
     const type =
@@ -865,10 +810,6 @@ function getFilteredTransactions() {
 
 }
 
-
-/* =========================================================
-   RENDER TRANSACTIONS
-========================================================= */
 
 function renderTransactions() {
 
@@ -1057,9 +998,6 @@ function renderTransactions() {
 }
 
 
-/* =========================================================
-   DASHBOARD
-========================================================= */
 
 function updateDashboard() {
 
@@ -1146,10 +1084,6 @@ function updateDashboard() {
 }
 
 
-/* =========================================================
-   MONTHLY SUMMARY
-========================================================= */
-
 function updateMonthlySummary() {
 
     const now =
@@ -1222,10 +1156,6 @@ function updateMonthlySummary() {
 }
 
 
-/* =========================================================
-   CATEGORY FILTER
-========================================================= */
-
 function updateCategoryFilter() {
 
     const currentValue =
@@ -1290,10 +1220,6 @@ function updateCategoryFilter() {
 
 }
 
-
-/* =========================================================
-   MONTH FILTER
-========================================================= */
 
 function updateMonthFilter() {
 
@@ -1382,10 +1308,6 @@ function formatMonth(value) {
 }
 
 
-/* =========================================================
-   FILTER EVENTS
-========================================================= */
-
 typeFilter.addEventListener(
     "change",
     renderTransactions
@@ -1409,10 +1331,6 @@ searchInput.addEventListener(
     renderTransactions
 );
 
-
-/* =========================================================
-   CATEGORY CHART
-========================================================= */
 
 function updateCategoryChart() {
 
@@ -1571,10 +1489,6 @@ function updateCategoryChart() {
 }
 
 
-/* =========================================================
-   QUICK STATS
-========================================================= */
-
 function updateQuickStats() {
 
     const incomes =
@@ -1664,10 +1578,6 @@ function updateQuickStats() {
 
 }
 
-
-/* =========================================================
-   FINANCIAL HEALTH
-========================================================= */
 
 function updateFinancialHealth() {
 
@@ -1814,10 +1724,6 @@ function updateFinancialHealth() {
 }
 
 
-/* =========================================================
-   EDIT TRANSACTION
-========================================================= */
-
 function editTransaction(id) {
 
     const transaction =
@@ -1880,10 +1786,6 @@ function editTransaction(id) {
 }
 
 
-/* =========================================================
-   DELETE TRANSACTION
-========================================================= */
-
 function deleteTransaction(id) {
 
     const transaction =
@@ -1928,10 +1830,6 @@ function deleteTransaction(id) {
 
 }
 
-
-/* =========================================================
-   CLEAR ALL
-========================================================= */
 
 clearAllBtn.addEventListener(
     "click",
@@ -1978,10 +1876,6 @@ clearAllBtn.addEventListener(
     }
 );
 
-
-/* =========================================================
-   CSV EXPORT
-========================================================= */
 
 exportBtn.addEventListener(
     "click",
@@ -2104,10 +1998,6 @@ function exportCSV() {
 }
 
 
-/* =========================================================
-   THEME
-========================================================= */
-
 function updateThemeIcon() {
 
     const icon =
@@ -2188,10 +2078,6 @@ function loadTheme() {
 }
 
 
-/* =========================================================
-   TOAST
-========================================================= */
-
 function showToast(
     title,
     message
@@ -2242,10 +2128,6 @@ closeToast.addEventListener(
 );
 
 
-/* =========================================================
-   REFRESH APPLICATION
-========================================================= */
-
 function refreshApplication() {
 
     updateCategoryFilter();
@@ -2258,10 +2140,6 @@ function refreshApplication() {
 
 }
 
-
-/* =========================================================
-   INITIALIZE
-========================================================= */
 
 loadTheme();
 
